@@ -21,7 +21,7 @@ def build_argparser():
     parser.add_argument(
         "--image-path",
         type=str,
-        default=r"C:\Users\zengxh\Documents\workspace\visualstudio-workspace\libtorch-demo\libtorch-yolov5-openvino\images\quejiao.jpg",
+        default=r"C:\Users\zengxh\Documents\workspace\visualstudio-workspace\libtorch-demo\opencv-yolov5-openvino\images\quejiao.jpg",
         help="image path",
     )
     parser.add_argument(

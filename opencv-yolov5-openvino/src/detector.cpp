@@ -114,7 +114,11 @@ bool Detector::process_frame(Mat& inframe, vector<Object>& detected_objects) {
         }
     }
     //执行预测
+    auto start = chrono::high_resolution_clock::now();
     infer_request->Infer();
+    auto end = chrono::high_resolution_clock::now();
+    std::chrono::duration<double> diff = end - start;
+    cout << "usesss " << diff.count() << " s" << endl;
     //获取各层结果
     vector<Rect> origin_rect;
     vector<float> origin_rect_cof;
